@@ -1,9 +1,3 @@
-/*
-Author URI: http://webthemez.com/
-Note: 
-Licence under Creative Commons Attribution 3.0 
--------------------------------------------------------*/
-
 @charset "utf-8";
 @import url(http://fonts.googleapis.com/css?family=Raleway:800,700,400);
 @import url(http://fonts.googleapis.com/css?family=Signika:400,600);
@@ -2292,7 +2286,6 @@ div.mc-image {
     position: relative;
     bottom: 0%;
     left: 0%;
-    height: 91%;
     width: 100%;
     overflow: hidden;
     background: #000;
@@ -2317,19 +2310,24 @@ div.mc-image {
     width: 100%;
 }
 
-
-/*     Media Queries
-   --------------------------- */
-@media (min-width: 768px) and (max-width: 1200px) {
-
-    .aboutUs-container {
+ .aboutUs-container {
         background-repeat: no-repeat;
         background-position: right;
         background-size: auto 59%;
         background-position-y: 150px;
-    }
+ }
+
+
+/*     Media Queries
+   --------------------------- */
+
+@media screen and (max-width: 1200px) {
+
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 990px) {
+
+}
+@media screen and (max-width: 767px) {
     .navStyle {
         float: left;
         width: 100%; 
@@ -2394,9 +2392,6 @@ div.mc-image {
     body{
         font-size: 20px;
     }
-    .video-container{
-        height: 42%;
-    }
     
     .points{
         font-size: 25px;
@@ -2409,11 +2404,13 @@ div.mc-image {
         float: initial;
         width: 100%;
     }
+    
     .team_area {
         width: 99%;
     }
 } 
-@media screen and (max-width: 480px){
+
+@media screen and (max-width: 480px) {
     
     .navStyle ul li:first-child{
         width: 100%;
@@ -2426,6 +2423,9 @@ div.mc-image {
         margin-top: 20px;
     }
    
+    .video-container{
+        min-height: 35%;
+    }
 
     #about-us .image-guy{
         width: 100%;
@@ -2462,6 +2462,10 @@ div.mc-image {
         font-size: 20px;
         line-height: 25px;
     }
+    .top_left_cont h2{
+        line-height: normal;
+        margin-top: 7%;
+    }
 
     .navbar {
         border: 0px solid #fff;
@@ -2472,6 +2476,5 @@ div.mc-image {
     }
     .team_area {
         width: 99%;
-    }
-    
+    } 
 }
