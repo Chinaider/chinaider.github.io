@@ -1,0 +1,19 @@
+#btnElevator {
+    display: none;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #32417c;
+    cursor: pointer;
+    font-size: 35px;
+    opacity: 0.5;
+  }
+  
+  #btnElevator:hover {
+    opacity: 1;
+  }

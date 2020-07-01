@@ -36,6 +36,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/resume.min.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
 
 </head>
 
@@ -50,6 +51,8 @@
     ga('send', 'pageview');
 
 </script>
+
+<button  class="elevator" id="btnElevator" title="Voltar ao topo"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></button>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <span class="d-block d-lg-none">Alexandre Chinaider</span>
@@ -245,9 +248,24 @@
 
 <!-- Custom scripts for this template -->
 <script src="js/resume.min.js"></script>
+<script src="js/elevator.min.js"></script>
 
 <script type="application/javascript">
     $(function(){$('#tempo').text((new Date()).getFullYear()-2014);});
+    var btnElevato = document.getElementById("btnElevator");
+    function scrollFunction() {
+        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+            btnElevator.style.display = "block";
+        } else {
+            btnElevator.style.display = "none";
+        }
+    }
+    var elevator = new Elevator({
+        element: btnElevator,
+        mainAudio: './music/elevator.mp3',
+        endAudio:  './music/ding.mp3'
+    });
+    window.onscroll = function() {scrollFunction()};    
 </script>
 
 </body>
