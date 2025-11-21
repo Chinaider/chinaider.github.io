@@ -1,0 +1,178 @@
+/*
+ * 1. Reset Básico
+ */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif; /* Fonte mais clássica para um tom de homenagem */
+    background-color: #f8f8f8; /* Fundo suave */
+    color: #333;
+    line-height: 1.6;
+}
+
+/*
+ * 2. Estilos do Header (Hero)
+ */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #4a6fa5; /* Um azul aconchegante */
+    color: #fff;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+/*
+ * 3. Estilos da Galeria Principal
+ */
+.cat-gallery {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/*
+ * 4. Estilos das Seções de Homenagem (cat-tribute)
+ */
+.cat-tribute {
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.cat-tribute:hover {
+    transform: translateY(-5px); /* Efeito sutil ao passar o mouse */
+}
+
+.cat-tribute h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #7b4397; /* Cor de destaque para os títulos */
+    margin-bottom: 20px;
+}
+
+/* Flexbox para o conteúdo do gato (imagem e texto) */
+.cat-content {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.cat-tribute img {
+    width: 40%; /* Imagem ocupando 40% em telas grandes */
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 5px solid #eee;
+}
+
+.cat-details {
+    width: 60%; /* Detalhes ocupando 60% em telas grandes */
+    font-size: 1.1em;
+}
+
+.tribute-message {
+    font-style: italic;
+    color: #a044ff;
+    border-left: 3px solid #7b4397;
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+.life-dates {
+    display: block;
+    font-weight: bold;
+    color: #555;
+}
+
+/*
+ * 5. Estilo de Destaque para Sisquinho
+ */
+.cat-tribute.highlight {
+    background-color: #fff0f5; /* Fundo mais suave e especial */
+    border: 3px solid #ff69b4; /* Borda rosa para destaque */
+    padding: 40px;
+    margin: 40px auto 60px auto;
+}
+
+.highlight h2 {
+    color: #ff69b4;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.highlight .cat-tribute img {
+    border: 5px solid #ff69b4;
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
+}
+
+/*
+ * 6. Footer
+ */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #eee;
+    color: #777;
+    font-size: 0.9em;
+}
+
+/*
+ * 7. Media Queries para Responsividade (Telas Menores)
+ */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    /* Em telas menores, o layout Flexbox deve empilhar a imagem e o texto */
+    .cat-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cat-tribute img, 
+    .cat-details {
+        width: 100%; /* Ocupam a largura total */
+        max-width: none;
+    }
+
+    /* Ajuste para o Sisquinho no topo para dispositivos móveis */
+    .cat-tribute.highlight {
+        margin: 20px auto 40px auto;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 40px 10px;
+    }
+
+    .cat-tribute h2 {
+        font-size: 2em;
+    }
+
+    .cat-tribute {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+}
